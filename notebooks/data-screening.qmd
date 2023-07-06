@@ -76,4 +76,3 @@ Scatter plot the event time series and look for any quantization issues. Have ti
 ```{python}
 ax = df.plot.scatter(x='DateTime', y='Depth(km)', figsize=(20,8))
 ax.set_ylim(50,0);
-```
