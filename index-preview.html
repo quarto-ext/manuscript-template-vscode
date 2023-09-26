@@ -294,12 +294,12 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <div id="42487957" class="cell markdown">
+       <div id="965dd61c" class="cell markdown">
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="0dd43b78" class="cell" data-execution_count="1">
+<div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="9dfe3472" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>eruptions <span class="op">=</span> [<span class="dv">1492</span>, <span class="dv">1585</span>, <span class="dv">1646</span>, <span class="dv">1677</span>, <span class="dv">1712</span>, <span class="dv">1949</span>, <span class="dv">1971</span>, <span class="dv">2021</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -311,10 +311,10 @@
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">''</span>)</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="fig-timeline" class="quarto-figure quarto-figure-center anchored" width="466" height="115" alt="An event plot of the years of the last 8 eruptions on La Palma.">
+<div id="fig-timeline" class="quarto-figure quarto-figure-center anchored" alt="An event plot of the years of the last 8 eruptions on La Palma." width="466" height="115">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="index_files/figure-html/fig-timeline-output-1.png" class="lightbox" data-description="Figure&nbsp;1: Timeline of recent earthquakes on La Palma" data-gallery="quarto-lightbox-gallery-1" title="An event plot of the years of the last 8 eruptions on La Palma."><img src="index_files/figure-html/fig-timeline-output-1.png" alt="An event plot of the years of the last 8 eruptions on La Palma." width="466" height="115" class="figure-img"></a>
+<a href="index_files/figure-html/fig-timeline-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description="Figure&nbsp;1: Timeline of recent earthquakes on La Palma" title="An event plot of the years of the last 8 eruptions on La Palma."><img src="index_files/figure-html/fig-timeline-output-1.png" alt="An event plot of the years of the last 8 eruptions on La Palma." width="466" height="115" class="figure-img"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-timeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Timeline of recent earthquakes on La Palma
@@ -323,14 +323,14 @@ Figure&nbsp;1: Timeline of recent earthquakes on La Palma
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="5018ff84" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="be9fb910" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>avg_years_between_eruptions <span class="op">=</span> np.mean(np.diff(eruptions[:<span class="op">-</span><span class="dv">1</span>]))</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>avg_years_between_eruptions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>79.83333333333333</code></pre>
 </div>
 </div></div>
-<div id="e96955a2" class="cell markdown">
+<div id="2bf43e82" class="cell markdown">
 <p>Based on data up to and including 1971, eruptions on La Palma happen every 79.8 years on average.</p>
 <p>Studies of the magma systems feeding the volcano, such as <span class="citation" data-cites="marrero2019">Marrero et al. (<a href="#ref-marrero2019" role="doc-biblioref">2019</a>)</span>, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
 <p>Eight eruptions have been recorded since the late 1400s (<a href="#fig-timeline" class="quarto-xref">Figure&nbsp;1</a>).</p>
@@ -395,7 +395,7 @@ Table&nbsp;1: Recent historic eruptions on La Palma
 <div id="fig-map" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/la-palma-map.png" class="lightbox" data-description="Figure&nbsp;2: Map of La Palma" data-gallery="quarto-lightbox-gallery-2"><img src="images/la-palma-map.png" class="img-fluid figure-img"></a>
+<a href="images/la-palma-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description="Figure&nbsp;2: Map of La Palma"><img src="images/la-palma-map.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Map of La Palma
@@ -415,10 +415,10 @@ Figure&nbsp;2: Map of La Palma
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="fig-spatial-plot" class="quarto-figure quarto-figure-center anchored" width="917" height="799" alt="A scatterplot of earthquake locations plotting latitude against longitude.">
+<div id="fig-spatial-plot" class="quarto-figure quarto-figure-center anchored" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="index_files/figure-html/fig-spatial-plot-output-1.png" class="lightbox" data-description="Figure&nbsp;3: Locations of earthquakes on La Palma since 2017." data-gallery="quarto-lightbox-gallery-3" title="A scatterplot of earthquake locations plotting latitude against longitude."><img src="index_files/figure-html/fig-spatial-plot-output-1.png" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799" class="figure-img"></a>
+<a href="index_files/figure-html/fig-spatial-plot-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="Figure&nbsp;3: Locations of earthquakes on La Palma since 2017." title="A scatterplot of earthquake locations plotting latitude against longitude."><img src="index_files/figure-html/fig-spatial-plot-output-1.png" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799" class="figure-img"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3: Locations of earthquakes on La Palma since 2017.
@@ -834,6 +834,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});</script> 
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":false});</script> 
   
 </body></html>

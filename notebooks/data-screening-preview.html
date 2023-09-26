@@ -193,19 +193,19 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="6c6b8b20" class="cell" data-execution_count="1">
+       <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="791d860d" class="cell" data-execution_count="1">
 <pre><code>import pandas as pd
 import matplotlib.pyplot as plt</code></pre>
 </div></div>
-<div id="a6b6d890" class="cell markdown">
+<div id="93584cbe" class="cell markdown">
 <p>Import <code>la-palma.csv</code> - a clean subset of <a href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><code>catalogoComunSV_1663233588717.csv</code></a>:</p>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="09c76fc6" class="cell" data-execution_count="2">
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="895af1da" class="cell" data-execution_count="2">
 <pre><code>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
 df.head()</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
@@ -267,9 +267,9 @@ df.head()</code></pre>
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="e8ff1eca" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="ab73c8ba" class="cell" data-execution_count="3">
 <pre><code>df.describe()</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="17">
 <div>
 
 
@@ -346,28 +346,28 @@ df.head()</code></pre>
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="64dcb61f" class="cell" data-execution_count="4">
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="217b3449" class="cell" data-execution_count="4">
 <pre><code>df.plot.scatter(x="Longitude", y="Latitude", figsize=(12,12), grid="on");</code></pre>
 <div class="cell-output cell-output-display">
 <div id="fig-539a35d47e664c97a50115a146a7f1bd-1" class="quarto-figure quarto-figure-center anchored" width="978" height="947">
 <figure class="quarto-float quarto-float-fig figure">
 <div class="">
-<a href="data-screening_files/figure-html/cell-5-output-1.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-1"><img src="data-screening_files/figure-html/cell-5-output-1.png" id="fig-539a35d47e664c97a50115a146a7f1bd-1" width="978" height="947" class="figure-img"></a>
+<a href="data-screening_files/figure-html/cell-5-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-description=""><img src="data-screening_files/figure-html/cell-5-output-1.png" id="fig-539a35d47e664c97a50115a146a7f1bd-1" width="978" height="947" class="figure-img"></a>
 </div>
 </figure>
 </div>
 </div>
 </div></div>
-<div id="ff18cec9" class="cell markdown">
+<div id="5829bcef" class="cell markdown">
 <section id="filter" class="level3">
 <h3 class="anchored" data-anchor-id="filter">Filter</h3>
 <p>Also some rows seem to be missing depth measurements, (see differences in the <strong>count</strong> for columns above) - take only rows with valid depths</p>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="a3612d29" class="cell" data-execution_count="5">
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="4246bd08" class="cell" data-execution_count="5">
 <pre><code>df = df[df['Depth(km)'].notna()]
 df.describe()</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
 
@@ -444,7 +444,7 @@ df.describe()</code></pre>
 </div>
 </div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="265563e8" class="cell" data-execution_count="6">
+<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="d0f22c6c" class="cell" data-execution_count="6">
 <pre><code>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
 df["Latitude"].plot.hist(bins=20, density=True)
@@ -452,20 +452,20 @@ plt.subplot(1,3,2)
 df["Longitude"].plot.hist(bins=20, density=True)
 plt.subplot(1,3,3)
 df["Depth(km)"].plot.hist(bins=50, density=True)</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>&lt;Axes: ylabel='Frequency'&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <div id="fig-539a35d47e664c97a50115a146a7f1bd-2" class="quarto-figure quarto-figure-center anchored" width="1565" height="485">
 <figure class="quarto-float quarto-float-fig figure">
 <div class="">
-<a href="data-screening_files/figure-html/cell-7-output-2.png" class="lightbox" data-description="" data-gallery="quarto-lightbox-gallery-2"><img src="data-screening_files/figure-html/cell-7-output-2.png" id="fig-539a35d47e664c97a50115a146a7f1bd-2" width="1565" height="485" class="figure-img"></a>
+<a href="data-screening_files/figure-html/cell-7-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-description=""><img src="data-screening_files/figure-html/cell-7-output-2.png" id="fig-539a35d47e664c97a50115a146a7f1bd-2" width="1565" height="485" class="figure-img"></a>
 </div>
 </figure>
 </div>
 </div>
 </div></div>
-<div id="387bb661" class="cell markdown">
+<div id="e1a22c58" class="cell markdown">
 <section id="spatial-plot" class="level2">
 <h2 class="anchored" data-anchor-id="spatial-plot">Spatial Plot</h2>
 <p>Scatter plot the spatial locations of events</p>
@@ -488,7 +488,7 @@ plt.show()</code></pre>
 <div id="fig-spatial-plot" class="quarto-figure quarto-figure-center anchored" width="917" height="799" alt="A scatterplot of earthquake locations plotting latitude against longitude.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="data-screening_files/figure-html/fig-spatial-plot-output-1.png" class="lightbox" data-description="Locations of earthquakes on La Palma since 2017." data-gallery="quarto-lightbox-gallery-3" title="A scatterplot of earthquake locations plotting latitude against longitude."><img src="data-screening_files/figure-html/fig-spatial-plot-output-1.png" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799" class="figure-img"></a>
+<a href="data-screening_files/figure-html/fig-spatial-plot-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" data-description="Locations of earthquakes on La Palma since 2017." title="A scatterplot of earthquake locations plotting latitude against longitude."><img src="data-screening_files/figure-html/fig-spatial-plot-output-1.png" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799" class="figure-img"></a>
 </div>
 <figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Locations of earthquakes on La Palma since 2017.
@@ -497,7 +497,7 @@ Locations of earthquakes on La Palma since 2017.
 </div>
 </div>
 </div></div>
-<div id="d3cde14f" class="cell markdown">
+<div id="70dd56c7" class="cell markdown">
 <section id="timeline-plot" class="level3">
 <h3 class="anchored" data-anchor-id="timeline-plot">Timeline Plot</h3>
 <p>Scatter plot the event time series and look for any quantization issues. Have times &amp; dates been loaded correctly?</p>
@@ -894,6 +894,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script> 
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});</script> 
   
 </body></html>

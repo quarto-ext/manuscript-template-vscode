@@ -306,11 +306,11 @@ Nacional (IGN). …</p>
 </front-stub>
 
 <body>
-<sec id="cell-321d9992-nb-article" specific-use="notebook-content">
+<sec id="cell-67a3a4e8-nb-article" specific-use="notebook-content">
 <sec id="introduction-nb-article">
   <title>1 Introduction</title>
   </sec>
-  <sec id="a5dd21fc-nb-article" specific-use="notebook-code">
+  <sec id="c69ee907-nb-article" specific-use="notebook-code">
   <code language="python">import matplotlib.pyplot as plt
 import numpy as np
 eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]</code>
@@ -329,14 +329,14 @@ plt.show()</code>
   </fig>
   </sec>
   </sec>
-  <sec id="cell-86046ea2-nb-article" specific-use="notebook-code">
+  <sec id="b397d1c8-nb-article" specific-use="notebook-code">
   <code language="python">avg_years_between_eruptions = np.mean(np.diff(eruptions[:-1]))
 avg_years_between_eruptions</code>
-  <sec id="cell-86046ea2-output-0-nb-article" specific-use="notebook-output">
+  <sec id="b397d1c8-output-0-nb-article" specific-use="notebook-output">
   <preformat>79.83333333333333</preformat>
   </sec>
   </sec>
-  <sec id="b471fd7f-nb-article" specific-use="notebook-content">
+  <sec id="cell-1962cec2-nb-article" specific-use="notebook-content">
   <p>Based on data up to and including 1971, eruptions on La Palma
   happen every 79.8 years on average.</p>
   <p>Studies of the magma systems feeding the volcano, such as Marrero
@@ -522,20 +522,20 @@ notebook by Steve Purves</fn>
 </front-stub>
 
 <body>
-<sec id="e3a1133d-nb-1" specific-use="notebook-code">
+<sec id="cell-43daa9a5-nb-1" specific-use="notebook-code">
 <preformat>import pandas as pd
 import matplotlib.pyplot as plt</preformat>
 </sec>
-<sec id="cell-21324404-nb-1" specific-use="notebook-content">
+<sec id="cell-25be6d6d-nb-1" specific-use="notebook-content">
 <p>Import <monospace>la-palma.csv</monospace> - a clean subset of
 <ext-link ext-link-type="uri" xlink:href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><monospace>catalogoComunSV_1663233588717.csv</monospace></ext-link>:</p>
 </sec>
-<sec id="cell-3588ccfa-nb-1" specific-use="notebook-code">
+<sec id="cell-7e7b2b9e-nb-1" specific-use="notebook-code">
 <preformat>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
 df.head()</preformat>
-<sec id="cell-3588ccfa-output-0-nb-1" specific-use="notebook-output">
+<sec id="cell-7e7b2b9e-output-0-nb-1" specific-use="notebook-output">
 <table-wrap>
   <table border="1">
     <thead>
@@ -594,9 +594,9 @@ df.head()</preformat>
 </table-wrap>
 </sec>
 </sec>
-<sec id="cf8656b6-nb-1" specific-use="notebook-code">
+<sec id="cca50ca5-nb-1" specific-use="notebook-code">
 <preformat>df.describe()</preformat>
-<sec id="cf8656b6-output-0-nb-1" specific-use="notebook-output">
+<sec id="cca50ca5-output-0-nb-1" specific-use="notebook-output">
 <table-wrap>
   <table border="1">
     <thead>
@@ -670,26 +670,26 @@ df.head()</preformat>
 </table-wrap>
 </sec>
 </sec>
-<sec id="cell-204e1533-nb-1" specific-use="notebook-code">
+<sec id="cell-3f3b8176-nb-1" specific-use="notebook-code">
 <preformat>df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</preformat>
-<sec id="cell-204e1533-output-0-nb-1" specific-use="notebook-output">
+<sec id="cell-3f3b8176-output-0-nb-1" specific-use="notebook-output">
 <fig>
   <caption><p></p></caption>
   <graphic id="fig-539a35d47e664c97a50115a146a7f1bd-1-nb-1" mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
 </fig>
 </sec>
 </sec>
-<sec id="ebdb3a1c-nb-1" specific-use="notebook-content">
+<sec id="cell-319030b4-nb-1" specific-use="notebook-content">
 <sec id="filter-nb-1">
   <title>Filter</title>
   <p>Also some rows seem to be missing depth measurements, (see
   differences in the <bold>count</bold> for columns above) - take only
   rows with valid depths</p>
   </sec>
-  <sec id="e3111732-nb-1" specific-use="notebook-code">
+  <sec id="f02e8517-nb-1" specific-use="notebook-code">
   <preformat>df = df[df['Depth(km)'].notna()]
 df.describe()</preformat>
-  <sec id="e3111732-output-0-nb-1" specific-use="notebook-output">
+  <sec id="f02e8517-output-0-nb-1" specific-use="notebook-output">
   <table-wrap>
     <table border="1">
       <thead>
@@ -763,7 +763,7 @@ df.describe()</preformat>
   </table-wrap>
   </sec>
   </sec>
-  <sec id="cell-528f6a0d-nb-1" specific-use="notebook-code">
+  <sec id="f31daa87-nb-1" specific-use="notebook-code">
   <preformat>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
 df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
@@ -771,17 +771,17 @@ plt.subplot(1,3,2)
 df[&quot;Longitude&quot;].plot.hist(bins=20, density=True)
 plt.subplot(1,3,3)
 df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
-  <sec id="cell-528f6a0d-output-0-nb-1" specific-use="notebook-output">
+  <sec id="f31daa87-output-0-nb-1" specific-use="notebook-output">
   <preformat>&lt;Axes: ylabel='Frequency'&gt;</preformat>
   </sec>
-  <sec id="cell-528f6a0d-output-1-nb-1" specific-use="notebook-output">
+  <sec id="f31daa87-output-1-nb-1" specific-use="notebook-output">
   <fig>
     <caption><p></p></caption>
     <graphic id="fig-539a35d47e664c97a50115a146a7f1bd-2-nb-1" mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-2.png" />
   </fig>
   </sec>
   </sec>
-  <sec id="cell-6bcba60c-nb-1" specific-use="notebook-content">
+  <sec id="cell-2e9530fb-nb-1" specific-use="notebook-content">
 </sec>
 <sec id="spatial-plot-nb-1">
   <title>Spatial Plot</title>
@@ -808,7 +808,7 @@ plt.show()</preformat>
   </fig>
   </sec>
   </sec>
-  <sec id="b9129c3f-nb-1" specific-use="notebook-content">
+  <sec id="f0aaa739-nb-1" specific-use="notebook-content">
   <sec id="timeline-plot-nb-1">
     <title>Timeline Plot</title>
     <p>Scatter plot the event time series and look for any quantization
