@@ -104,7 +104,7 @@
   \setlength{\itemsep}{#2\baselineskip}}}
  {\end{list}}
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{\hfill\break#1\hfill\break}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
@@ -150,15 +150,16 @@
 \newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
 \makeatother
 \makeatletter
-\@ifpackageloaded{caption}{}{\usepackage{caption}}
-\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
+
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
@@ -195,6 +196,7 @@ Nacional (IGN). \ldots{}
 \section*{Plain Language Summary}
 Earthquake data for the island of La Palma from the September 2021
 eruption is found \ldots{}
+
 
 
 \section{Introduction}\label{introduction}
@@ -252,6 +254,12 @@ Equation~\ref{eq-poisson}, the probability of an eruption in the next
 \(t\) years can be calculated.
 
 \begin{longtable}[]{@{}ll@{}}
+\caption{Recent historic eruptions on La
+Palma}\label{tbl-history}\tabularnewline
+\toprule\noalign{}
+Name & Year \\
+\midrule\noalign{}
+\endfirsthead
 \toprule\noalign{}
 Name & Year \\
 \midrule\noalign{}
@@ -268,14 +276,20 @@ Tajuya near El Paso & 1585 \\
 Montaña Quemada & 1492 \\
 \end{longtable}
 
-Recent historic eruptions on La Palma
-
 Table~\ref{tbl-history} summarises the eruptions recorded since the
 colonization of the islands by Europeans in the late 1400s.
 
+\begin{figure}
+
+\centering{
+
 \includegraphics{images/la-palma-map.png}
 
-Map of La Palma
+}
+
+\caption{\label{fig-map}Map of La Palma}
+
+\end{figure}%
 
 La Palma is one of the west most islands in the Volcanic Archipelago of
 the Canary Islands (Figure~\ref{fig-map}).
@@ -284,7 +298,7 @@ the Canary Islands (Figure~\ref{fig-map}).
 
 \centering{
 
-\includegraphics{index_files/figure-latex/fig-spatial-plot-output-1.png}
+\includegraphics{index_files/figure-latex/notebooks-data-screening-fig-spatial-plot-output-1.png}
 
 }
 
