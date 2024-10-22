@@ -309,7 +309,7 @@ Nacional (IGN). …</p>
 <body>
 <sec id="introduction-nb-article">
   <title>1 Introduction</title>
-  <sec id="b9886bad-nb-article" specific-use="notebook-content">
+  <sec id="dde98bae-nb-article" specific-use="notebook-content">
   <code language="python">import matplotlib.pyplot as plt
 import numpy as np
 eruptions = [1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021]</code>
@@ -328,14 +328,14 @@ plt.show()</code>
     </fig>
   </boxed-text>
   </sec>
-  <sec id="cc3289db-nb-article" specific-use="notebook-content">
+  <sec id="cell-6f3def6d-nb-article" specific-use="notebook-content">
   <code language="python">avg_years_between_eruptions = np.mean(np.diff(eruptions[:-1]))
 avg_years_between_eruptions</code>
   <boxed-text>
     <preformat>np.float64(79.83333333333333)</preformat>
   </boxed-text>
   </sec>
-  <sec id="cell-4c09dd06-nb-article" specific-use="notebook-content">
+  <sec id="cell-6ca286db-nb-article" specific-use="notebook-content">
   <p>Based on data up to and including 1971, eruptions on La Palma
   happen every 79.8 years on average.</p>
   <p>Studies of the magma systems feeding the volcano, such as Marrero
@@ -522,15 +522,15 @@ notebook by Steve Purves</fn>
 </front-stub>
 
 <body>
-<sec id="cell-5685aa1c-nb-1" specific-use="notebook-content">
+<sec id="cell-25276572-nb-1" specific-use="notebook-content">
 <preformat>import pandas as pd
 import matplotlib.pyplot as plt</preformat>
 </sec>
-<sec id="cell-4309ba48-nb-1" specific-use="notebook-content">
+<sec id="cell-7f05db89-nb-1" specific-use="notebook-content">
 <p>Import <monospace>la-palma.csv</monospace> - a clean subset of
 <ext-link ext-link-type="uri" xlink:href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><monospace>catalogoComunSV_1663233588717.csv</monospace></ext-link>:</p>
 </sec>
-<sec id="cell-1aea292c-nb-1" specific-use="notebook-content">
+<sec id="da2659e5-nb-1" specific-use="notebook-content">
 <preformat>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
@@ -594,7 +594,7 @@ df.head()</preformat>
   </table-wrap>
 </boxed-text>
 </sec>
-<sec id="cell-972b205c-nb-1" specific-use="notebook-content">
+<sec id="ae1253df-nb-1" specific-use="notebook-content">
 <preformat>df.describe()</preformat>
 <boxed-text>
   <table-wrap>
@@ -670,20 +670,20 @@ df.head()</preformat>
   </table-wrap>
 </boxed-text>
 </sec>
-<sec id="cell-4fe15f00-nb-1" specific-use="notebook-content">
+<sec id="cell-81b4dfb2-nb-1" specific-use="notebook-content">
 <preformat>df.plot.scatter(x=&quot;Longitude&quot;, y=&quot;Latitude&quot;, figsize=(12,12), grid=&quot;on&quot;);</preformat>
 <boxed-text>
   <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-5-output-1.png" />
 </boxed-text>
 </sec>
-<sec id="b5494117-nb-1" specific-use="notebook-content">
+<sec id="cell-19a1ba0d-nb-1" specific-use="notebook-content">
 <sec id="filter-nb-1">
   <title>Filter</title>
   <p>Also some rows seem to be missing depth measurements, (see
   differences in the <bold>count</bold> for columns above) - take only
   rows with valid depths</p>
   </sec>
-  <sec id="fc9d4d13-nb-1" specific-use="notebook-content">
+  <sec id="e56a69b3-nb-1" specific-use="notebook-content">
   <preformat>df = df[df['Depth(km)'].notna()]
 df.describe()</preformat>
   <boxed-text>
@@ -760,7 +760,7 @@ df.describe()</preformat>
     </table-wrap>
   </boxed-text>
   </sec>
-  <sec id="cell-217eff97-nb-1" specific-use="notebook-content">
+  <sec id="cell-1368822d-nb-1" specific-use="notebook-content">
   <preformat>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
 df[&quot;Latitude&quot;].plot.hist(bins=20, density=True)
@@ -772,7 +772,7 @@ df[&quot;Depth(km)&quot;].plot.hist(bins=50, density=True)</preformat>
     <graphic mimetype="image" mime-subtype="png" xlink:href="data-screening_files/figure-jats/cell-7-output-1.png" />
   </boxed-text>
   </sec>
-  <sec id="ba79ccef-nb-1" specific-use="notebook-content">
+  <sec id="da7ad095-nb-1" specific-use="notebook-content">
 </sec>
 <sec id="spatial-plot-nb-1">
   <title>Spatial Plot</title>
@@ -799,7 +799,7 @@ plt.show()</preformat>
     </fig>
   </boxed-text>
   </sec>
-  <sec id="cell-7679c45f-nb-1" specific-use="notebook-content">
+  <sec id="cell-22ac5ce7-nb-1" specific-use="notebook-content">
   <sec id="timeline-plot-nb-1">
     <title>Timeline Plot</title>
     <p>Scatter plot the event time series and look for any quantization
