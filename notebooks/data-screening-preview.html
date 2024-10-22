@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.5.20">
+    <meta name="generator" content="quarto-1.6.30">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,7 +72,7 @@
       }      
     </style>
 
-    <script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script>
     window.document.addEventListener("DOMContentLoaded", function () {
 
       var header = window.document.querySelector("#quarto-embed-header");
@@ -119,10 +119,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3a01e2046221230fdceeea94b1ec5d67.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-121a360469368334aa6db774e843ea6f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -132,7 +132,7 @@
     document.body.classList.add('hypothesis-enabled');
   });
 </script>  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>  
       </head>
 
@@ -193,24 +193,23 @@
 </div>
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
-       <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="791d860d" class="cell" data-execution_count="1">
+       <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div id="9869c8c4" class="cell" data-execution_count="1">
 <pre><code>import pandas as pd
 import matplotlib.pyplot as plt</code></pre>
 </div></div>
-<div id="93584cbe" class="cell markdown">
+<div id="fa6d20ec" class="cell markdown">
 <p>Import <code>la-palma.csv</code> - a clean subset of <a href="https://github.com/Notebooks-Now/submission-quarto-full/blob/main/data/catalogoComunSV_1663233588717.csv"><code>catalogoComunSV_1663233588717.csv</code></a>:</p>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="895af1da" class="cell" data-execution_count="2">
+<div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div id="20564559" class="cell" data-execution_count="2">
 <pre><code>df = pd.read_csv('la-palma.csv')
 df['DateTime'] = pd.to_datetime(df['DateTime'])
 df = df.sort_values(by=['DateTime'], ascending=True)
 df.head()</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<div>
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -267,16 +266,14 @@ df.head()</code></pre>
 
 </div>
 </div>
-</div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="ab73c8ba" class="cell" data-execution_count="3">
+<div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="5e1cb126" class="cell" data-execution_count="3">
 <pre><code>df.describe()</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<div>
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -348,9 +345,8 @@ df.head()</code></pre>
 
 </div>
 </div>
-</div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="217b3449" class="cell" data-execution_count="4">
+<div class="cell-container"><div class="cell-decorator"><pre>In [4]:</pre></div><div id="bc344742" class="cell" data-execution_count="4">
 <pre><code>df.plot.scatter(x="Longitude", y="Latitude", figsize=(12,12), grid="on");</code></pre>
 <div class="cell-output cell-output-display">
 <div class="">
@@ -360,21 +356,20 @@ df.head()</code></pre>
 </div>
 </div>
 </div></div>
-<div id="5829bcef" class="cell markdown">
+<div id="9e2f453c" class="cell markdown">
 <section id="filter" class="level3">
 <h3 class="anchored" data-anchor-id="filter">Filter</h3>
 <p>Also some rows seem to be missing depth measurements, (see differences in the <strong>count</strong> for columns above) - take only rows with valid depths</p>
 </section>
 </div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="4246bd08" class="cell" data-execution_count="5">
+<div class="cell-container"><div class="cell-decorator"><pre>In [5]:</pre></div><div id="fd26224b" class="cell" data-execution_count="5">
 <pre><code>df = df[df['Depth(km)'].notna()]
 df.describe()</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="19">
-<div>
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -446,9 +441,8 @@ df.describe()</code></pre>
 
 </div>
 </div>
-</div>
 </div></div>
-<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="d0f22c6c" class="cell" data-execution_count="6">
+<div class="cell-container"><div class="cell-decorator"><pre>In [6]:</pre></div><div id="ac3241be" class="cell" data-execution_count="6">
 <pre><code>plt.figure(figsize=(20,6))
 plt.subplot(1,3,1)
 df["Latitude"].plot.hist(bins=20, density=True)
@@ -456,18 +450,15 @@ plt.subplot(1,3,2)
 df["Longitude"].plot.hist(bins=20, density=True)
 plt.subplot(1,3,3)
 df["Depth(km)"].plot.hist(bins=50, density=True)</code></pre>
-<div class="cell-output cell-output-display" data-execution_count="20">
-<pre><code>&lt;Axes: ylabel='Frequency'&gt;</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div class="">
 <figure class="figure">
-<p class=""><a href="data-screening_files/figure-html/cell-7-output-2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="data-screening_files/figure-html/cell-7-output-2.png" width="1565" height="485" class="figure-img"></a></p>
+<p class=""><a href="data-screening_files/figure-html/cell-7-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="data-screening_files/figure-html/cell-7-output-1.png" width="1565" height="485" class="figure-img"></a></p>
 </figure>
 </div>
 </div>
 </div></div>
-<div id="e1a22c58" class="cell markdown">
+<div id="2f4d7edc" class="cell markdown">
 <section id="spatial-plot" class="level2">
 <h2 class="anchored" data-anchor-id="spatial-plot">Spatial Plot</h2>
 <p>Scatter plot the spatial locations of events</p>
@@ -487,7 +478,7 @@ colorbar.set_label("Magnitude")
 
 plt.show()</code></pre>
 <div class="cell-output cell-output-display">
-<div id="fig-spatial-plot" class="quarto-figure quarto-figure-center quarto-float anchored" alt="A scatterplot of earthquake locations plotting latitude against longitude.">
+<div id="fig-spatial-plot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A scatterplot of earthquake locations plotting latitude against longitude.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
 <a href="data-screening_files/figure-html/fig-spatial-plot-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Locations of earthquakes on La Palma since 2017."><img src="data-screening_files/figure-html/fig-spatial-plot-output-1.png" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="917" height="799" class="figure-img"></a>
@@ -499,7 +490,7 @@ Locations of earthquakes on La Palma since 2017.
 </div>
 </div>
 </div></div>
-<div id="70dd56c7" class="cell markdown">
+<div id="07489ec0" class="cell markdown">
 <section id="timeline-plot" class="level3">
 <h3 class="anchored" data-anchor-id="timeline-plot">Timeline Plot</h3>
 <p>Scatter plot the event time series and look for any quantization issues. Have times &amp; dates been loaded correctly?</p>
@@ -542,18 +533,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -585,7 +565,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -593,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -915,30 +917,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
     }
-  });
-
-};
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
           </script> 
   
 </body></html>
